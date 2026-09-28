@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoodWise — cook what you have</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="toast" class="toast"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">FW</span>
+    <div class="brand-text">
+      <h1>FoodWise</h1>
+      <p>cook what's already yours</p>
+    </div>
+  </div>
+  <nav class="tabs" id="tabs">
+    <button class="tab-btn active" data-tab="recommendations">Cook Now</button>
+    <button class="tab-btn" data-tab="inventory">Inventory</button>
+    <button class="tab-btn" data-tab="recipes">Recipes</button>
+    <button class="tab-btn" data-tab="scan">Scan Receipt</button>
+    <button class="tab-btn" data-tab="preferences">Preferences</button>
+  </nav>
+</header>
+
+<main>
+
+  <section id="tab-recommendations" class="tab-panel active">
+    <div class="panel-head">
+      <div>
+        <h2>What to cook now</h2>
+        <p class="muted" id="reco-subtitle">Ranked by what's about to expire, what you have, and what you like.</p>
+      </div>
+      <button class="btn btn-ghost" id="retrain-btn">Retrain ranker</button>
+    </div>
+    <div id="reco-list" class="card-grid"></div>
+  </section>
+
+  <section id="tab-inventory" class="tab-panel">
+    <div class="panel-head">
+      <div>
+        <h2>Your kitchen</h2>
+        <p class="muted">Sorted by what expires soonest.</p>
+      </div>
+    </div>
+    <form id="inventory-form" class="inline-form">
+      <input type="text" id="inv-name" placeholder="Ingredient, e.g. spinach" required>
+      <input type="number" id="inv-qty" placeholder="Qty" value="1" min="0" step="0.1">
+      <input type="text" id="inv-unit" placeholder="Unit" value="unit">
+      <select id="inv-storage">
+        <option value="pantry">Pantry</option>
+        <option value="fridge">Fridge</option>
+        <option value="freezer">Freezer</option>
+      </select>
+      <input type="date" id="inv-expiry" title="Leave blank to auto-estimate">
+      <button type="submit" class="btn btn-primary">Add item</button>
+    </form>
+    <div id="inventory-list" class="inventory-list"></div>
+  </section>
+
+  <section id="tab-recipes" class="tab-panel">
+    <div class="panel-head">
+      <div>
+        <h2>Recipe library</h2>
+        <p class="muted" id="recipe-count"></p>
+      </div>
+      <input type="search" id="recipe-search" placeholder="Search recipes...">
+    </div>
+    <div id="recipe-list" class="card-grid"></div>
+  </section>
+
+  <section id="tab-scan" class="tab-panel">
+    <div class="panel-head">
+      <div>
+        <h2>Scan a receipt</h2>
+        <p class="muted">Upload a photo. Review the matches, then confirm to add them to inventory.</p>
+      </div>
+    </div>
+    <form id="scan-form" class="inline-form">
+      <input type="file" id="scan-file" accept="image/*" required>
+      <button type="submit" class="btn btn-primary">Scan</button>
+    </form>
+    <div id="scan-results"></div>
+  </section>
+
+  <section id="tab-preferences" class="tab-panel">
+    <div class="panel-head">
+      <div>
+        <h2>Preferences</h2>
+        <p class="muted">Tune what "good" means for your recommendations.</p>
+      </div>
+    </div>
+    <form id="preferences-form" class="pref-form">
+      <label>
+        Nutrition goal
+        <select id="pref-goal">
+          <option value="balanced">Balanced</option>
+          <option value="high_protein">High protein</option>
+          <option value="low_carb">Low carb</option>
+          <option value="light">Light / lower calorie</option>
+        </select>
+      </label>
+      <label>
+        Expiry horizon (days) — how soon counts as "urgent"
+        <input type="number" id="pref-horizon" min="1" max="30" value="5">
+      </label>
+      <label>
+        Dietary tags to require (comma separated, must match recipe tags e.g. vegetarian, low-carb)
+        <input type="text" id="pref-restrictions" placeholder="vegetarian">
+      </label>
+      <label>
+        Disliked ingredients (comma separated — recipes using these are hidden)
+        <input type="text" id="pref-disliked" placeholder="cilantro, mushroom">
+      </label>
+      <label>
+        Cuisine you gravitate toward (optional boost)
+        <select id="pref-cuisine">
+          <option value="">No preference</option>
+          <option value="italian">Italian</option>
+          <option value="asian">Asian</option>
+          <option value="mexican">Mexican</option>
+          <option value="mediterranean">Mediterranean</option>
+          <option value="indian">Indian</option>
+          <option value="american">American</option>
+        </select>
+      </label>
+      <button type="submit" class="btn btn-primary">Save preferences</button>
+    </form>
+  </section>
+
+</main>
+
+<div id="modal-backdrop" class="modal-backdrop">
+  <div class="modal">
+    <button class="modal-close" id="modal-close">&times;</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

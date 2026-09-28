@@ -1,0 +1,212 @@
+{
+  "buttermilk": [
+    {
+      "substitute": "milk",
+      "note": "add 1 tbsp lemon juice or vinegar per cup",
+      "compatibility": 0.85
+    }
+  ],
+  "sour cream": [
+    {
+      "substitute": "greek yogurt",
+      "note": "1:1 swap",
+      "compatibility": 0.9
+    }
+  ],
+  "greek yogurt": [
+    {
+      "substitute": "sour cream",
+      "note": "1:1 swap",
+      "compatibility": 0.9
+    }
+  ],
+  "baking powder": [
+    {
+      "substitute": "baking soda",
+      "note": "use 1/3 amount plus an acid like lemon juice",
+      "compatibility": 0.6
+    }
+  ],
+  "brown sugar": [
+    {
+      "substitute": "white sugar",
+      "note": "add 1 tbsp molasses per cup if available",
+      "compatibility": 0.75
+    }
+  ],
+  "white sugar": [
+    {
+      "substitute": "brown sugar",
+      "note": "1:1 swap, slightly moister result",
+      "compatibility": 0.85
+    }
+  ],
+  "heavy cream": [
+    {
+      "substitute": "milk",
+      "note": "add 2 tbsp butter per cup",
+      "compatibility": 0.7
+    }
+  ],
+  "milk": [
+    {
+      "substitute": "water",
+      "note": "use in savory dishes only, thinner result",
+      "compatibility": 0.4
+    }
+  ],
+  "butter": [
+    {
+      "substitute": "olive oil",
+      "note": "use 3/4 the amount",
+      "compatibility": 0.7
+    }
+  ],
+  "olive oil": [
+    {
+      "substitute": "butter",
+      "note": "melt first, use slightly more",
+      "compatibility": 0.7
+    }
+  ],
+  "white rice": [
+    {
+      "substitute": "brown rice",
+      "note": "longer cook time",
+      "compatibility": 0.85
+    }
+  ],
+  "brown rice": [
+    {
+      "substitute": "white rice",
+      "note": "shorter cook time",
+      "compatibility": 0.85
+    }
+  ],
+  "chicken breast": [
+    {
+      "substitute": "chicken thigh",
+      "note": "adjust cook time up slightly",
+      "compatibility": 0.9
+    }
+  ],
+  "chicken thigh": [
+    {
+      "substitute": "chicken breast",
+      "note": "adjust cook time down slightly",
+      "compatibility": 0.9
+    }
+  ],
+  "vegetable broth": [
+    {
+      "substitute": "water",
+      "note": "add extra salt and herbs",
+      "compatibility": 0.5
+    }
+  ],
+  "chicken broth": [
+    {
+      "substitute": "vegetable broth",
+      "note": "1:1 swap",
+      "compatibility": 0.85
+    }
+  ],
+  "parmesan": [
+    {
+      "substitute": "pecorino romano",
+      "note": "slightly saltier",
+      "compatibility": 0.8
+    }
+  ],
+  "soy sauce": [
+    {
+      "substitute": "tamari",
+      "note": "1:1 swap, gluten free",
+      "compatibility": 0.95
+    }
+  ],
+  "lime juice": [
+    {
+      "substitute": "lemon juice",
+      "note": "1:1 swap",
+      "compatibility": 0.85
+    }
+  ],
+  "lemon juice": [
+    {
+      "substitute": "lime juice",
+      "note": "1:1 swap",
+      "compatibility": 0.85
+    }
+  ],
+  "cilantro": [
+    {
+      "substitute": "parsley",
+      "note": "milder flavor, no strong swap",
+      "compatibility": 0.5
+    }
+  ],
+  "white wine": [
+    {
+      "substitute": "chicken broth",
+      "note": "add a splash of vinegar",
+      "compatibility": 0.5
+    }
+  ],
+  "penne": [
+    {
+      "substitute": "fusilli",
+      "note": "any short pasta works",
+      "compatibility": 0.9
+    }
+  ],
+  "fusilli": [
+    {
+      "substitute": "penne",
+      "note": "any short pasta works",
+      "compatibility": 0.9
+    }
+  ],
+  "spaghetti": [
+    {
+      "substitute": "linguine",
+      "note": "any long pasta works",
+      "compatibility": 0.9
+    }
+  ],
+  "cream cheese": [
+    {
+      "substitute": "greek yogurt",
+      "note": "thinner texture",
+      "compatibility": 0.6
+    }
+  ],
+  "coconut milk": [
+    {
+      "substitute": "heavy cream",
+      "note": "loses coconut flavor",
+      "compatibility": 0.5
+    }
+  ],
+  "red onion": [
+    {
+      "substitute": "yellow onion",
+      "note": "milder, less sharp",
+      "compatibility": 0.85
+    }
+  ],
+  "yellow onion": [
+    {
+      "substitute": "red onion",
+      "note": "slightly sharper flavor",
+      "compatibility": 0.85
+    }
+  ],
+  "beef broth": [
+    {
+      "substitute": "chicken broth",
+      "note": "lighter flavor",
+      "compatibility": 0.7
+    }
+  ]
+}

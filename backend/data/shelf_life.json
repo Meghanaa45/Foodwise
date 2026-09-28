@@ -1,0 +1,17 @@
+{
+  "produce_leafy": 5,
+  "produce_root": 21,
+  "produce_fruit": 7,
+  "produce_other": 10,
+  "dairy": 10,
+  "meat": 3,
+  "seafood": 2,
+  "grain": 365,
+  "legume": 365,
+  "spice": 730,
+  "condiment": 180,
+  "bakery": 5,
+  "pantry": 270,
+  "frozen": 120,
+  "egg": 21
+}
